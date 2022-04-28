@@ -336,19 +336,18 @@ The SAM format consists of a header and an alignment section.
 
 `**DESeq2**` is a differential gene expression analysis R package based on the negative binomial distribution.
 
---- | --- | --- | ---
+--- | ---   | ---       | ---
 1	| QNAME	| String	| Query template NAME
-2	| FLAG	| Int	| bitwise FLAG
+2	| FLAG	| Int	    | bitwise FLAG
 3	| RNAME	| String	| References sequence NAME
-4	| POS	| Int	| 1- based leftmost mapping POSition
-5	| MAPQ	| Int	| MAPping Quality
+4	| POS	| Int	    | 1- based leftmost mapping POSition
+5	| MAPQ	| Int	    | MAPping Quality
 6	| CIGAR	| String	| CIGAR string
 7	| RNEXT	| String	| Ref. name of the mate/next read
-8	| PNEXT	| Int	| Position of the mate/next read
-9	| TLEN	| Int	| observed Template LENgth
+8	| PNEXT	| Int	    | Position of the mate/next read
+9	| TLEN	| Int	    | observed Template LENgth
 10	| SEQ	| String	| segment SEQuence
 11	| QUAL	| String	| ASCII of Phred-scaled base QUALity+33
---- | --- | --- | ---
 
 #### Installing `DESeq2`
 
