@@ -1,7 +1,7 @@
-A Quick RNA-seq Pipeline Tutorial for STAT 465 
+A Quick RNA-seq Pipeline Tutorial
 ================
 
-**TA**: Keren Li, \<<keren.li@northwestern.edu>\>
+**Keren Li**, \<<li.keren.cn@gmail.com>\>
 
 
 ## What is RNA-seq?
@@ -54,6 +54,13 @@ $ gunzip Glycine_max.Glycine_max_v2.1.dna.toplevel.fa.gz
 $ wget http://ftp.ensemblgenomes.org/pub/plants/release-53/gff3/glycine_max/Glycine_max.Glycine_max_v2.1.53.gff3.gz
 $ gunzip Glycine_max.Glycine_max_v2.1.53.gff3.gz
 ```
+
+Let's inspect content of `Glycine_max.Glycine_max_v2.1.53.gff3`. `less` is a command line utility similar to `more`, but has more advanced features and allows you to navigate both forward and backward through the file.
+
+```bash
+less Glycine_max.Glycine_max_v2.1.53.gff3
+```
+
 The GFF3 file downloaded has a messed up `Parent` field. This is unusual situation. We need remove strings: `gene:`, `transcript:`, and `CDS:` and convert the GFF3 file to GTF file to make STAR work properly later.
 
 ```bash
