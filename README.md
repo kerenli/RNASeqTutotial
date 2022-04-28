@@ -350,7 +350,7 @@ The SAM format consists of a header and an alignment section:
 |10	| SEQ	| String	| segment SEQuence                      |
 |11	| QUAL	| String	| ASCII of Phred-scaled base QUALity+33 |
 
-CIGAR Format:
+#### CIGAR Format
 
 |CIGAR  |Code   |	BAM Integer	Description                                 |Consumes query |Consumes reference |
 |---    | :---  | :---                                                      | :---          |:---               |
