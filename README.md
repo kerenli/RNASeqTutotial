@@ -1,4 +1,4 @@
-A Quick RNA-seq Pipeline Tutorial
+A Quick RNA-seq Pipeline Tutorial for STAT465
 ================
 
 **Keren Li**, \<<li.keren.cn@gmail.com>\>
