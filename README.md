@@ -312,6 +312,10 @@ To submit the alignment script on QUEST, run
 $ sbatch STAR_mapping.sh
 ```
 
+RNA-seq reads aligned on genes are now stored in the `*ReadsPerGene.out.tab` files.
+
+## `samtools`
+
 ## Analysis of Counts with DESeq2:
 
 `**DESeq2**` is a differential gene expression analysis R package based on the negative binomial distribution.
