@@ -329,8 +329,20 @@ $ samtools view SRR391535Aligned.sortedByCoord.out.bam | less
 ```
 Here `|` is the piping symbol, which is the process of redirecting the output of one command to the input of another command. 
 
+First we create the index file (BAI) for the BAM file with the following command:
+```bash
+$ samtools index SRR391535Aligned.sortedByCoord.out.bam
+```
+It generates an index file `SRR391535Aligned.sortedByCoord.out.bam.bai`. Then we extract the data for reference (chromosome) `2`:
+```bash
+$ samtools view SRR391535Aligned.sortedByCoord.out.bam 2 | less
+```
+Now save aligned result in (chromosome) `2` to a BAMfile using `>` symbol with specified columns. `>` takes the output of a command and redirects it into a file.
 
-
+```bash
+$ samtools view -h SRR391535Aligned.sortedByCoord.out.bam 2 | awk '{print $3, "\t", $4, "\t", $8}' > SRR391535.chr2.sam
+```
+`-h` means include the header in the output.
 
 #### SAM format
 
