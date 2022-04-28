@@ -314,12 +314,41 @@ $ sbatch STAR_mapping.sh
 
 RNA-seq reads aligned on genes are now stored in the `*ReadsPerGene.out.tab` files.
 
-## `samtools`
 
-## Analysis of Counts with DESeq2:
+
+## Exploring BAM files with `samtools`
+
+A BAM file (.bam) is the binary version of a SAM file. A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data. 
+
+`samtools` is a suite of programs for interacting with high-throughput sequencing data. To view and convert SAM/BAM/CRAM files, use `samtools view`. With no options or regions specified, prints all alignments in the specified input alignment file (in SAM, BAM, or CRAM format) to standard output in SAM format (with no header).
+
+```bash
+$ module load samtools
+$ cd /projects/e31675/RNAseqExample/bam
+$ samtools view SRR391535Aligned.sortedByCoord.out.bam | less
+```
+Here `|` is the piping symbol, which is the process of redirecting the output of one command to the input of another command. 
+
+The SAM format consists of a header and an alignment section.
+
+
+## Analysis of Counts with `DESeq2`:
 
 `**DESeq2**` is a differential gene expression analysis R package based on the negative binomial distribution.
 
+--- | --- | --- | ---
+1	| QNAME	| String	| Query template NAME
+2	| FLAG	| Int	| bitwise FLAG
+3	| RNAME	| String	| References sequence NAME
+4	| POS	| Int	| 1- based leftmost mapping POSition
+5	| MAPQ	| Int	| MAPping Quality
+6	| CIGAR	| String	| CIGAR string
+7	| RNEXT	| String	| Ref. name of the mate/next read
+8	| PNEXT	| Int	| Position of the mate/next read
+9	| TLEN	| Int	| observed Template LENgth
+10	| SEQ	| String	| segment SEQuence
+11	| QUAL	| String	| ASCII of Phred-scaled base QUALity+33
+--- | --- | --- | ---
 
 #### Installing `DESeq2`
 
