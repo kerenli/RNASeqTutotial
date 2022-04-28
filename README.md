@@ -329,7 +329,9 @@ $ samtools view SRR391535Aligned.sortedByCoord.out.bam | less
 ```
 Here `|` is the piping symbol, which is the process of redirecting the output of one command to the input of another command. 
 
-The SAM format consists of a header and an alignment section.
+#### SAM format
+
+The SAM format consists of a header and an alignment section:
 
 |Col|Field  |	Type	|Brief description                      |
 |---| :---: | :---:     | :---:                                 |
@@ -344,6 +346,19 @@ The SAM format consists of a header and an alignment section.
 |9	| TLEN	| Int	    | observed Template LENgth              |
 |10	| SEQ	| String	| segment SEQuence                      |
 |11	| QUAL	| String	| ASCII of Phred-scaled base QUALity+33 |
+
+
+|CIGAR  |Code   |	BAM Integer	Description                                 |Consumes query |Consumes reference |
+|---    | :---: | :---:                                                     | :---:         |:---:              |
+|M	    |0      |	alignment match (can be a sequence match or mismatch)   |	yes         |	yes             |
+|I	    |1      |	insertion to the reference                              |	yes         |	no              |
+|D	    |2      |	deletion from the reference                             |	no          |	yes             |
+|N	    |3      |	skipped region from the reference                       |	no          |	yes             |
+|S	    |4      |	soft clipping (clipped sequences present in SEQ)        |	yes         |	no              |
+|H	    |5      |	hard clipping (clipped sequences NOT present in SEQ)    |	no          |	no              |
+|P	    |6      |	padding (silent deletion from padded reference)         |	no          |	no              |
+|=	    |7      |	sequence match                                          |	yes         |	yes             |
+|X	    |8      |	sequence mismatch                                       |	yes         |	yes             |
 
 
 ## Analysis of Counts with `DESeq2`:
