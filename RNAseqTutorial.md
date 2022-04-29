@@ -122,6 +122,7 @@ fastq-dump SRR391538
 fastq-dump SRR391539 
 fastq-dump SRR391541 
 ```
+See [Submitting a Job on Quest](https://kb.northwestern.edu/page.php?id=69247) for details.
 
 To submit your first script to QUEST, run
 
