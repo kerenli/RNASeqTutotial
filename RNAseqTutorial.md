@@ -31,6 +31,8 @@ Windows users will first need to download an ssh client, such as [_PuTTY_](https
 **Username** : your Northwestern NetID  <br />
 **Password** : your Northwestern NetID password  
 
+The dollar sign `$` is terminal prompt in Unix-based systems. Do not include it in your input.
+
 If you'll be working with GUI (graphical window) applications, A FastX client is recommended.
 
 #### Getting started with QUEST
