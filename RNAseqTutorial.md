@@ -43,7 +43,7 @@ To get started with QUEST, let's visit the allocation folder and create a new fo
 $ cd /projects/e31675
 $ mkdir RNAseqExample
 $ cd RNAseqExample/
-$ mkdir genome gtf scripts reads bams
+$ mkdir genome gtf scripts reads bam
 ```
 The samples used in this tutorial are `SRR391535`, `SRR391536`, `SRR391537`, `SRR391538`, `SRR391539`, and `SRR391541`from [_Comparing the response to chronic ozone of five agriculturally important legume species_](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?study=SRP009826) at NCBI, and much credit goes to [this RNA-seq tutorial](https://bioinformatics.uconn.edu/resources-and-events/tutorials-2/rna-seq-tutorial-with-reference-genome/).
 
