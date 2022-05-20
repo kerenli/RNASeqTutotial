@@ -72,6 +72,16 @@ $ gffread Glycine_max.Glycine_max_v2.1.53.gff3 -T -o Glycine_max.Glycine_max_v2.
 ```
 To call any package pre-installed on QUEST, load the corresponding module. In the above bash script, we load module `cufflinks` to call `gffread` app.
 
+#### Downloading index file and annotation file for S. cerevisiae
+
+Google "ensembl yeast dna", the first link in the results should be the S. cerevisiae page in ensembl.org. 
+
+Click **download DNA sequence** (FASTA), you will be redirect to Ensembl's ftp siite. There are so many fasta files. In the file name, `toplevel` means this fole oncludes chromosoes, regions not assembled into chromosomes and `N` padded haplotype/patch regions; `primary_assembly` means haplotypes and patches excluded. I would suggest you to use the promary assembly file. If the primary assembly file is not present, that indicates that there are no haplotype/patch regions, and the 'toplevel' file is equivalent. `dna_rm` means that interspersed repeats and low complexity regions are masked by `N`, `dna_sm` means masked by lowercased letters, single `dna` in the file name indicates unmasked genomic DNA sequences.
+
+In S. cerevisiae page, click **Download GTF**, then you will see the corresponding annotation file.
+
+
+
 #### Downloading SRA files
 
 `fastq-dump` is a tool for downloading sequencing reads from NCBI’s Sequence Read Archive (**SRA**). These sequence reads will be downloaded as FASTQ files. Load module `sratoolkit` to call `fastq-dump` to download `SRR391535` .SRA file and converting it to FASTQ.
